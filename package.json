@@ -14,7 +14,7 @@
     "recharts": "2.1.12"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set HTTPS=true && set SSL_CRT_FILE=./certs/juroscompostos_hopto_org.pem && set SSL_KEY_FILE=./certs/juroscompostos_hopto_org.pem && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

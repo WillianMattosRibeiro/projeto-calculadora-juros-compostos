@@ -1,7 +1,10 @@
 version: '3.7'
+
 services:
+
     app:
         container_name: calculadora-juros-compostos
+        restart: unless-stopped
         build:
             context: .
             dockerfile: Dockerfile
@@ -9,6 +12,7 @@ services:
             - '.:/app'
             - '/app/node_modules'
         ports:
-            - '3000:3000'
+            - '80:80'
         environment:
             - NODE_ENV=development
+        
